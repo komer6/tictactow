@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .atble tr td {
+         width: 50px;
+      }
+
+      button {
+         font-size: x-large;
+         width: 90px;
+      }
+
+      .pipi {
+         background-image: url("images/bubble.jpeg")
+      }
+   </style>
+</head>
+
+<body>
+
+
+   <input id="res" type="number" value="0">
+   <table class="atble">
+      <tr>
+         <td><button onclick="Cleace()">CE</button></td>
+      </tr>
+      <tr>
+         <td><button onclick="dig0()">0</button></td>
+         <td><button onclick="Clea()">C</button></td>
+         <td><button onclick="equ()">=</button></td>
+         <td><button id="plu" onclick="plus()">+</button></td>
+      </tr>
+      <tr>
+         <td><button onclick="dig1()">1</button></td>
+         <td><button onclick="dig2()">2</button></td>
+         <td><button onclick="dig3()">3</button></td>
+         <td><button id="minu" onclick="minus()">-</button></td>
+      </tr>
+      <tr>
+         <td><button onclick="dig4()">4</button></td>
+         <td><button onclick="dig5()">5</button></td>
+         <td><button onclick="dig6()">6</button></td>
+         <td><button id="mult" onclick="multy()">X</button></td>
+      </tr>
+      <tr>
+         <td><button onclick="dig7()">7</button></td>
+         <td><button onclick="dig8()">8</button></td>
+         <td><button onclick="dig9()">9</button></td>
+         <td><button id="divs" onclick="divis()">%</button></td>
+      </tr>
+   </table>
+   <div style="display: inline">
+      <img src="images\bar.jpeg" alt="" style="border: 5px solid #a83b52; width: 800px;">
+      <p class="pipi">kgkjkjhkhkjhljhlkhlkhlh</p>
+   </div>
+
+
+   <script>
+      let first = 0;
+      let decider = 0
+      function dig0() {
+         if (res.value < 1000000) {
+            res.value = (res.value * 10)
+         }
+      }
+      function dig1() {
+         5
+         if (res.value < 1000000) {
+            res.value = (res.value * 10) + 1
+         }
+      }
+      function dig2() {
+         if (res.value < 1000000) {
+            res.value = (res.value * 10) + 2
+         }
+      }
+      function dig3() {
+         if (res.value < 1000000) {
+            res.value = (res.value * 10) + 3
+         }
+      }
+      function dig4() {
+         if (res.value < 1000000) {
+            res.value = (res.value * 10) + 4
+         }
+      }
+      function dig5() {
+         if (res.value < 1000000) {
+            res.value = (res.value * 10) + 5
+         }
+      }
+      function dig6() {
+         if (res.value < 1000000) {
+            res.value = (res.value * 10) + 6
+         }
+      }
+      function dig7() {
+         if (res.value < 1000000) {
+            res.value = (res.value * 10) + 7
+         }
+      }
+      function dig8() {
+         if (res.value < 1000000) {
+            res.value = (res.value * 10) + 8
+         }
+      }
+      function dig9() {
+         if (res.value < 1000000) {
+            res.value = (res.value * 10) + 9
+         }
+      }
+      function plus() {
+         first = res.value
+         res.value = 0
+         decider = 1
+         restcolor()
+         plu.style.color = "blue"
+
+      }
+      function minus() {
+         first = res.value
+         res.value = 0
+         decider = 2
+         restcolor()
+         minu.style.color = "blue"
+
+      }
+      function multy() {
+         first = res.value
+         res.value = 0
+         decider = 3
+         restcolor()
+         mult.style.color = "blue"
+
+      }
+      function divis() {
+         first = res.value
+         res.value = 0
+         decider = 4
+         restcolor()
+         divs.style.color = "blue"
+
+      }
+      function restcolor() {
+         mult.style.color = "black"
+         plu.style.color = "black"
+         divs.style.color = "black"
+         minu.style.color = "black"
+      }
+
+      function equ() {
+         if (decider == 1) {
+            res.value = parseInt(first) + parseInt(res.value)
+            first = 0
+         }
+         if (decider == 2) {
+            res.value = parseInt(first) - parseInt(res.value)
+            first = 0
+         }
+         if (decider == 3) {
+            res.value = parseInt(first) * parseInt(res.value)
+            first = 0
+         }
+         if (decider == 4) {
+            res.value = parseInt(first) / parseInt(res.value)
+            first = 0
+         }
+         restcolor()
+      }
+      function Clea() {
+         res.value = 0
+
+      }
+      function Cleace() {
+         res.value = 0
+         first = 0
+
+      }
+
+
+
+
+
+
+   </script>
+</body>
+
+</html>
